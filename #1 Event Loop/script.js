@@ -1,7 +1,7 @@
-console.log(1);
-console.log(2);
-console.log(3);
-setTimeout(() => {
-    console.log('Callback function fired!')
-}, 2000);
-console.log(4);
+console.log('🍎 Synchronous 1');
+
+setTimeout(_ => console.log('🥪 Timeout 2'), 0); // Macrotask
+
+Promise.resolve().then(_ => console.log('🍍 Promise 3')); // Microtask
+
+console.log('🍎 Synchronous 4'); 
